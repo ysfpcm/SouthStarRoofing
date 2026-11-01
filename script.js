@@ -53,21 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
         animatedElements.forEach(el => el.classList.add('visible'));
     }
 
-    // Form Submission prevent default
-    const form = document.getElementById('quote-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            btn.innerText = 'Request Sent!';
-            btn.style.backgroundColor = '#10B981'; // Green success
-            
-            setTimeout(() => {
-                form.reset();
-                btn.innerText = originalText;
-                btn.style.backgroundColor = ''; // Reset
-            }, 3000);
-        });
-    }
 });
