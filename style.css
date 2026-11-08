@@ -578,24 +578,12 @@ header.scrolled .mobile-menu-toggle {
     font-size: 1.5rem;
 }
 
-.form-group {
+.contact-options p {
     margin-bottom: 20px;
 }
 
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(242, 110, 34, 0.1);
+.contact-options .btn-block + .btn-block {
+    margin-top: 15px;
 }
 
 /* Footer */
