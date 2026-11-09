@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, observerOptions);
 
         animatedElements.forEach(el => observer.observe(el));
+        document.documentElement.classList.add('animations-enabled');
     } else {
         animatedElements.forEach(el => el.classList.add('visible'));
     }

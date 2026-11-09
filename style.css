@@ -652,37 +652,37 @@ footer {
 }
 
 /* Animations (Intersection Observer targets) */
-.fade-in-up {
+.animations-enabled .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.slide-in-left {
+.animations-enabled .slide-in-left {
     opacity: 0;
     transform: translateX(-40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.slide-in-right {
+.animations-enabled .slide-in-right {
     opacity: 0;
     transform: translateX(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-in-left {
+.animations-enabled .fade-in-left {
     opacity: 0;
     transform: translateX(-30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-in-right {
+.animations-enabled .fade-in-right {
     opacity: 0;
     transform: translateX(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.visible {
+.animations-enabled .visible {
     opacity: 1;
     transform: translate(0);
 }
