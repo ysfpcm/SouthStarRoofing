@@ -28,15 +28,15 @@
                 <a href="#areas">Service Areas</a>
                 <a href="#contact" class="btn-primary">Request Quote</a>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <button class="mobile-menu-toggle" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-        <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <button class="close-menu" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
         <nav class="mobile-links">
             <a href="#about">About</a>
             <a href="#services">Services</a>
