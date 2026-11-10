@@ -16,18 +16,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.querySelector('.mobile-menu-overlay');
     const mobileLinks = document.querySelectorAll('.mobile-links a');
 
+    const closeMobileMenu = (restoreFocus = false) => {
+        mobileMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) {
+            menuToggle.focus();
+        }
+    };
+
     menuToggle.addEventListener('click', () => {
         mobileMenu.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        closeMenu.focus();
     });
 
     closeMenu.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
+        closeMobileMenu(true);
     });
 
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
+            closeMobileMenu();
         });
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu(true);
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
     });
 
     // Intersection Observer for scroll animations

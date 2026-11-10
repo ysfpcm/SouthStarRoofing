@@ -225,6 +225,7 @@ header.scrolled .mobile-menu-toggle {
     position: fixed;
     top: 0;
     right: -100%;
+    visibility: hidden;
     width: 80%;
     max-width: 400px;
     height: 100vh;
@@ -239,6 +240,7 @@ header.scrolled .mobile-menu-toggle {
 
 .mobile-menu-overlay.active {
     right: 0;
+    visibility: visible;
 }
 
 .close-menu {
