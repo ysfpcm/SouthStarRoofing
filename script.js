@@ -2,13 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Sticky Header
     const header = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
+    const updateHeader = () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-    });
+    };
+    updateHeader();
+    window.addEventListener('scroll', updateHeader);
 
     // Mobile Menu
     const menuToggle = document.querySelector('.mobile-menu-toggle');
