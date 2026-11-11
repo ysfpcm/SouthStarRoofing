@@ -229,6 +229,8 @@ header.scrolled .mobile-menu-toggle {
     width: 80%;
     max-width: 400px;
     height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
     background: var(--white);
     z-index: 2000;
     padding: 40px;
