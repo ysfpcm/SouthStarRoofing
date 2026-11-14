@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.addEventListener('focusin', event => {
+        if (mobileMenu.classList.contains('active') && !mobileMenu.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
+
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
             closeMobileMenu();
