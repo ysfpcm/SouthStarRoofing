@@ -736,3 +736,18 @@ footer {
         gap: 15px;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+    }
+
+    .animations-enabled .fade-in-up,
+    .animations-enabled .slide-in-left,
+    .animations-enabled .slide-in-right,
+    .animations-enabled .fade-in-left,
+    .animations-enabled .fade-in-right {
+        opacity: 1;
+        transform: none;
+    }
+}
