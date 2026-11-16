@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .fade-in-left, .fade-in-right');
-    if ('IntersectionObserver' in window) {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if ('IntersectionObserver' in window && !prefersReducedMotion) {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
