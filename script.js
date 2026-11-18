@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', event => {
         if (mobileMenu.classList.contains('active') && !mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            closeMobileMenu();
+            closeMobileMenu(mobileMenu.contains(document.activeElement) || document.activeElement === document.body);
         }
     });
 
