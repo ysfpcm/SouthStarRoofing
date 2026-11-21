@@ -62,7 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+            const focusInMenu = mobileMenu.contains(document.activeElement);
             closeMobileMenu();
+            if (focusInMenu) {
+                document.querySelector('.logo a').focus();
+            }
         }
     });
 
