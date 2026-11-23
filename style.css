@@ -304,11 +304,11 @@ header.scrolled .mobile-menu-toggle {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
     min-height: 600px;
+    min-height: max(600px, 100vh);
     display: flex;
     align-items: center;
-    padding-top: 60px; /* Offset for mobile tap-to-call later */
+    padding: 100px 0 60px;
 }
 
 .hero-bg {
